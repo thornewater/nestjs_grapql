@@ -20,7 +20,7 @@ export class PostsResolver {
   @Mutation((returns) => Post)
   async addPost(@Args('createPostInput') createPostInput: CreatePostInput) {
     const result = await this.postsService.create(createPostInput);
-    console.log(result);
+
     return result;
   }
 }
