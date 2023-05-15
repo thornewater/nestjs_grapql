@@ -1,0 +1,23 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Post {
+  id: Float!
+  content: String!
+  isDone: Boolean!
+}
+
+type Query {
+  getPosts: [Post!]!
+  getPost(id: Float!): Post!
+}
+
+type Mutation {
+  addPost(createPostInput: CreatePostInput!): Post!
+}
+
+input CreatePostInput {
+  content: String!
+  isDone: Boolean!
+}
